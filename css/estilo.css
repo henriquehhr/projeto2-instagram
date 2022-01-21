@@ -1,0 +1,388 @@
+/*
+
+<topo>
+</topo>
+
+<corpo>
+    <conteudo-principal>
+        <stories>
+        </stories>
+        <feed>
+            <publicação>
+            </publicacção>
+            .
+            .
+            .
+        </feed>
+    </conteudo-principal>
+    <sidebar>
+    </sidebar>
+</corpo>
+
+*/
+
+body {
+    background-color: #FAFAFA;
+    font-family: 'Encode Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+.barra-navegacao-mobile /* escondendo a barra de navegação para o modo mobile */ {
+    display: none;
+}
+
+.aparecer-mobile {
+    display: none;
+}
+
+ion-icon {
+    width: 22px;
+    height: 22px;
+}
+
+h2 /* nome dos perfis */ {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #262626;
+}
+
+/* ------------Barra fixa do topo------------ */
+.topo {
+    background-color: #FFFFFF;
+    border: 1px solid #DBDBDB;
+    height: 54px;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+}
+
+.topo-conteudo {
+    width: 935px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.topo-conteudo-esquerda /* símbolo + logotipo do Instagram */ {
+    display: flex;
+    align-items: center;
+}
+
+.topo-conteudo-esquerda img {
+    margin-top: 7px; /* o logotipo do Instagram tá ligeiramente bra baixo */
+}
+
+.separador-vertical /* barra vertical que separa o símbolo do logotipo do Instagram */ {
+    background-color: #DBDBDB;
+    width: 1px;
+    height: 22px;
+    margin: 0px 10px;
+}
+
+.barra-pesquisa {
+    background: #FAFAFA;
+    border: 1px solid #DBDBDB;
+    box-sizing: border-box;
+    border-radius: 3px;
+    width: 215px;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.barra-pesquisa p {
+    font-size: 12px;
+    line-height: 14px;
+    color: #979797;
+}
+
+.topo-conteudo-direita ion-icon  {
+    margin-left: 18px;
+}
+
+.topo-conteudo-direita ion-icon:first-of-type {
+    margin-left: 0;
+}
+
+/* ------------Corpo da página------------ */
+.corpo { /* Stories + Feed de publicações + Sidebar */
+    width: 935px;
+    margin: 0 auto;
+    margin-top: 87px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.conteudo-principal { /* Stories + Feed */
+    width: 614px;
+}
+
+/* ------------Barra horizontal com os stories------------ */
+.stories {
+    height: 118px;
+    padding: 18px 18px 14px 18px;
+    background-color: #FFFFFF;
+    border: 1px solid #DBDBDB;
+    box-sizing: border-box;
+    border-radius: 3px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.stories-ver-mais /* setinha para ver os stories seguintes */{
+    position: relative;
+    left: 554px;
+    z-index: 2;
+}
+
+.story-background /* fundo rosa/laranja do story ainda não assistido */{
+    width: 66px;
+    height: 66px;
+    background-image: url(/imagens/stories_background\ 1.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.story {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 13px;
+}
+
+.stories-ver-mais + .story {
+    margin-left: -32px; /* descontando o espaço que a setinha ainda ocupa no começo dos stories */
+}
+
+.story p /*nome do perfil em cada story*/ {
+    margin-top: 4px;
+    font-size: 12px;
+    line-height: 14px;
+    color: #262626;
+}
+
+
+/* ------------Feed com as publicações------------ */
+.publicacao {
+    background: #FFFFFF;
+    border: 1px solid #DBDBDB;
+    box-sizing: border-box;
+    border-radius: 3px;
+    margin-bottom: 60px;
+}
+
+.publicacao ion-icon:hover{
+    color:gray;
+}
+
+.topo-publicacao /* imagem do perfil, nome do perfil e "..." do canto direito */{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px
+}
+
+.topo-publicacao img {
+    margin-right: 15px;
+}
+
+.topo-publicacao p /* "..." do canto direito */{
+    font-size: 16px;
+    line-height: 14px;
+    font-weight: 700;
+    color: #262626;
+    margin-bottom: 5px;
+}
+
+.id-perfil-topo-publicacao /* imagem + nome do perfil */{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.base-publicacao /* botões (curtir, comentar, enviar e salvar) número de curtidas, legenda e comentários da publicação */{
+    padding: 10px;
+}
+
+.acoes-publicacao {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.base-publicacao p {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000000;
+}
+
+.acoes-publicacao-lado-esquerdo ion-icon /* botões de curtir, comentar e enviar */ {
+    margin-right: 10px;
+}
+
+.curtidas-publicacao /* número de curtidas */ {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.curtidas-publicacao img /* foto do perfil que curtiu a publicação */{
+    margin-right: 5px;
+}
+
+strong /* nome dos perfis nos comentários da publicação */ {
+    font-weight: 500;
+}
+
+.legenda-publicacao {
+    margin-bottom: 5px;
+}
+
+.comentarios-publicacao > p /* "Ver todos os x comentários" */ {
+    color: #8E8E8E;
+    font-size: 10px;
+}
+
+.comentario /* comentário individual */{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+.comentario ion-icon /* botão para curtir o comentário */{
+    height: 13px;
+    width: 13px;
+}
+
+.adicionar-comentario-publicacao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 32px;
+    padding: 10px;
+    border-top: 1px;
+    border-style: solid;
+    border-color: rgb(233, 232, 232);
+}
+
+.adicionar-comentario-publicacao ion-icon /* carinha feliz */{
+    margin-right: 10px;
+}
+
+.adicionar-comentario-publicacao input {
+    border: none;
+    width: 100%;
+}
+
+.adicionar-comentario-publicacao input:focus {
+    outline: none;
+}
+
+.botao-publicar-comentario p {
+    color: #B2DFFC;
+    font-size: 14px;
+    line-height: 16px;
+    transition: color 300ms;
+}
+
+.botao-publicar-comentario p:hover {
+    color: #0095F6;
+}
+
+/* ------------Sidebar fixa no canto superior esquerdo------------ */
+.sidebar {
+    position: fixed;
+    margin-left: 642px;
+    width: 293px;
+}
+
+.sidebar-topo /* foto + nome do perfil da conta logada */{
+    display: flex;
+    align-items: center;
+    margin-top: 23px;
+    margin-bottom: 23px;
+}
+
+.sidebar-topo img /* foto do perfil */{
+    margin-right: 16px;
+}
+
+.sidebar-topo p {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+    color: #8E8E8E;
+}
+
+.sugestoes-topo /* "Sugestões para você" + "Ver tudo" */{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.sugestoes-topo span:first-of-type p { /* Sugestões para você */
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    color: #8E8E8E;
+}
+
+.sugestoes-topo span:last-of-type p { /* Ver tudo */
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    color: #262626;
+}
+
+.sugestao /* Sugestão individual */{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.sugestao img {
+    margin-right: 10px;
+}
+
+.sugestao h2 {
+    margin-bottom: 5px;
+}
+
+.sugestao-imagem-nome {
+    display: flex;
+}
+
+.sugestao p { /* "Seguir" */
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    color: #139EF2;
+}
+
+.sugestao h2 + p { /* "Segue você" */
+    font-size: 12px;
+    line-height: 14px;
+    color: #8E8E8E;
+}
+
+.sidebar-base /* "Sobre" o Instagram */{
+    margin-top: 35px;
+}
+
+.sidebar-base p {
+    font-size: 11px;
+    line-height: 13px;
+    color: #C7C7C7;
+    margin-bottom: 18px;
+}
